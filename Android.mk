@@ -537,31 +537,6 @@ ifeq ($(CONFIG_FFMPEG),yes)
                 ffmpeg_filter.c \
                 ffmpeg_opt.c
         endif
-        ifeq ($(VERSION_BRANCH),2.1)
-            LOCAL_SRC_FILES +=  \
-                ffmpeg_filter.c \
-                ffmpeg_opt.c
-        endif
-#        ifeq ($(VERSION_BRANCH),2.0)
-#            LOCAL_SRC_FILES +=  \
-#                ffmpeg_filter.c \
-#                ffmpeg_opt.c
-#        endif
-#        ifeq ($(VERSION_BRANCH),1.2)
-#            LOCAL_SRC_FILES +=  \
-#                ffmpeg_filter.c \
-#                ffmpeg_opt.c
-#        endif
-#        ifeq ($(VERSION_BRANCH),1.1)
-#            LOCAL_SRC_FILES +=  \
-#                ffmpeg_filter.c \
-#                ffmpeg_opt.c
-#        endif
-#        ifeq ($(VERSION_BRANCH),1.0)
-#            LOCAL_SRC_FILES +=  \
-#                ffmpeg_filter.c \
-#                ffmpeg_opt.c
-#        endif
         LOCAL_C_INCLUDES := \
             $(FFMPEG_ROOT_DIR)/$(FFMPEG_CONFIG_DIR)
         LOCAL_SHARED_LIBRARIES := \
@@ -580,31 +555,6 @@ ifeq ($(CONFIG_FFMPEG),yes)
                 ffmpeg_filter.c \
                 ffmpeg_opt.c
         endif
-        ifeq ($(VERSION_BRANCH),2.1)
-            LOCAL_SRC_FILES +=  \
-                ffmpeg_filter.c \
-                ffmpeg_opt.c
-        endif
-#        ifeq ($(VERSION_BRANCH),2.0)
-#            LOCAL_SRC_FILES +=  \
-#                ffmpeg_filter.c \
-#                ffmpeg_opt.c
-#        endif
-#        ifeq ($(VERSION_BRANCH),1.2)
-#            LOCAL_SRC_FILES +=  \
-#                ffmpeg_filter.c \
-#                ffmpeg_opt.c
-#        endif
-#        ifeq ($(VERSION_BRANCH),1.1)
-#            LOCAL_SRC_FILES +=  \
-#                ffmpeg_filter.c \
-#                ffmpeg_opt.c
-#        endif
-#        ifeq ($(VERSION_BRANCH),1.0)
-#            LOCAL_SRC_FILES +=  \
-#                ffmpeg_filter.c \
-#                ffmpeg_opt.c
-#        endif
         LOCAL_C_INCLUDES := \
             $(FFMPEG_ROOT_DIR)/$(FFMPEG_CONFIG_DIR)
         LOCAL_SHARED_LIBRARIES := \

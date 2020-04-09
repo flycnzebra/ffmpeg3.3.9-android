@@ -89,7 +89,6 @@ ifneq ($(FF_CONFIGURATION_STRING), $(FF_LAST_CONFIGURATION_STRING_OUTPUT))
             --disable-everything \
             --disable-yasm; \
         make -j; \
-        find | grep -v "\.ver" | grep -v "ffversion\.h" | grep -v "version\.h" | xargs rm; \
         cd $$OLDPWD;
 
     ifeq ($(VERSION_BRANCH),3.3)
@@ -108,7 +107,6 @@ ifneq ($(FF_CONFIGURATION_STRING), $(FF_LAST_CONFIGURATION_STRING_OUTPUT))
                 --disable-everything \
                 --disable-yasm; \
             make -j; \
-            find | grep -v "\.ver" | grep -v "ffversion\.h" | grep -v "version\.h" | xargs rm; \
             cd $$OLDPWD;
     endif
 
