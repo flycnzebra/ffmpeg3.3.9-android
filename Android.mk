@@ -5,18 +5,10 @@
 LOCAL_PATH:=$(call my-dir)
 
 FFMPEG_ROOT_DIR := $(LOCAL_PATH)
-FFMPEG_CONFIG_DIR := android/$(TARGET_PRODUCT)-$(TARGET_BUILD_VARIANT)
+FFMPEG_CONFIG_DIR := android/config
 
 VERSION_SUFFIX := -$(shell (cat $(FFMPEG_ROOT_DIR)/RELEASE))
 $(warning $(VERSION_SUFFIX))
-
-ifeq ($(findstring 3.3, $(VERSION_SUFFIX)),3.3)
-    VERSION_BRANCH := 3.3
-endif
-
-ifeq ($(VERSION_BRANCH),)
-    $(error Unsupported FFmpeg version)
-endif
 
 include $(CLEAR_VARS)
 
@@ -531,12 +523,9 @@ ifeq ($(CONFIG_FFMPEG),yes)
         include $(CLEAR_VARS)
         LOCAL_SRC_FILES := \
             cmdutils.c \
-            ffmpeg.c
-        ifeq ($(VERSION_BRANCH),3.3)
-            LOCAL_SRC_FILES +=  \
-                ffmpeg_filter.c \
-                ffmpeg_opt.c
-        endif
+            ffmpeg.c \
+            ffmpeg_filter.c \
+            ffmpeg_opt.c
         LOCAL_C_INCLUDES := \
             $(FFMPEG_ROOT_DIR)/$(FFMPEG_CONFIG_DIR)
         LOCAL_SHARED_LIBRARIES := \
@@ -549,12 +538,9 @@ ifeq ($(CONFIG_FFMPEG),yes)
         include $(CLEAR_VARS)
         LOCAL_SRC_FILES := \
             cmdutils.c \
-            ffmpeg.c
-        ifeq ($(VERSION_BRANCH),3.3)
-            LOCAL_SRC_FILES +=  \
-                ffmpeg_filter.c \
-                ffmpeg_opt.c
-        endif
+            ffmpeg.c \
+            ffmpeg_filter.c \
+            ffmpeg_opt.c
         LOCAL_C_INCLUDES := \
             $(FFMPEG_ROOT_DIR)/$(FFMPEG_CONFIG_DIR)
         LOCAL_SHARED_LIBRARIES := \
