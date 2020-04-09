@@ -1,6 +1,7 @@
 include $(SUBDIR)../config.mak
 
 NAME = swscale
+FFLIBS = avutil
 
 HEADERS = swscale.h                                                     \
           version.h                                                     \

@@ -180,6 +180,7 @@ ifeq ($(CONFIG_AVCODEC),yes)
     ifeq ($(CONFIG_SHARED),yes)
         include $(CLEAR_VARS)
         LOCAL_SRC_FILES := \
+			$(FFMPEG_LIB_DIR)/neon/mpegvideo.c \
             $(FFFILES)
         LOCAL_C_INCLUDES := \
             $(FFMPEG_ROOT_DIR)/$(FFMPEG_CONFIG_DIR) \
@@ -207,6 +208,7 @@ ifeq ($(CONFIG_AVCODEC),yes)
     ifeq ($(CONFIG_STATIC),yes)
         include $(CLEAR_VARS)
         LOCAL_SRC_FILES := \
+			$(FFMPEG_LIB_DIR)/neon/mpegvideo.c \
             $(FFFILES)
         LOCAL_C_INCLUDES := \
             $(FFMPEG_ROOT_DIR)/$(FFMPEG_CONFIG_DIR) \
